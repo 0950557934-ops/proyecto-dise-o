@@ -1,0 +1,17 @@
+/* Esto elimina las restricciones que pone Vite por defecto */
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: block; /* Cambiamos el flex que trae Vite por defecto */
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,123 @@
+/* 1. RESET Y BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html, #root { width: 100%; overflow-x: hidden; }
+
+.app-container { min-height: 100vh; transition: 0.5s ease; }
+.kids-theme { background-color: #fff9db; }
+.adult-theme { background-color: #121212; }
+
+/* 2. NAVEGACIÓN Y LOGO */
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover { transform: scale(1.1); }
+
+.site-name { font-size: 1.4rem; font-weight: bold; color: #fab005; }
+
+.nav-links a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
+.nav-links a:hover { color: #fab005; }
+
+.search-container input { padding: 8px 15px; border-radius: 20px; border: none; outline: none; }
+
+/* 3. HEADERS */
+.kids-header {
+  background-image: url('./assets/fondo.avif');
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.adult-header {
+  background-image: url('./assets/logo4.avif');
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fab005;
+}
+
+.main-title { font-size: 3.5rem; }
+
+/* 4. BOTÓN TOGGLE */
+.toggle-button {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.toggle-button:hover { background: #fab005; color: black; }
+
+/* 5. GRID Y TARJETAS */
+.content { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.kids-card { background: white; padding: 30px; border-radius: 25px; border: 4px solid #ffe066; text-align: center; }
+.adult-card { background: #2c2c2c; padding: 30px; border-radius: 12px; color: #e9ecef; }
+
+.card-icon { font-size: 4rem; margin-bottom: 10px; }
+.genre-badge { background: #eee; padding: 4px 10px; border-radius: 10px; font-size: 0.8rem; color: #666; }
+.fav-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; float: right; }
+
+.read-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.read-button:hover { background: #fab005; color: black; }
+
+/* 6. SUBTÍTULOS INTELIGENTES */
+.adult-theme .section-subtitle { color: white; text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+.kids-theme .section-subtitle { color: #432818; text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+
+/* 7. FOOTER CORREGIDO */
+.footer-section {
+  background: #111;
+  color: white;
+  padding: 50px 5% 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-section h3 { color: #fab005; margin-bottom: 15px; }
+
+/* 8. RESPONSIVO */
+@media (max-width: 800px) {
+  .stories-grid { grid-template-columns: 1fr; }
+}
